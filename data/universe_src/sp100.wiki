@@ -1,0 +1,392 @@
+The '''S&P 100 Index''' is a [[stock market index]] of United States stocks maintained by [[Standard & Poor's]].
+
+Index options on the S&P 100 are traded with the ticker symbol "OEX". Because of the popularity of these options, investors often refer to the index by its ticker symbol.
+
+The S&P 100, a subset of the [[S&P 500]], includes 100 leading U.S. stocks with exchange-listed options. Constituents of the S&P 100 are selected for sector balance and represent about 57% of the market capitalization of the S&P 500 and almost 45% of the market capitalization of the U.S. equity markets. The stocks in the S&P 100 tend to be the largest and most established companies in the S&P 500.<ref>[http://us.spindices.com/idsenhancedfactsheet/file.pdf?calcFrequency=M&force_download=true&hostIdentifier=48190c8c-42c4-46af-8d1a-0cd5db894797&indexId=2431 S&P 100 fact sheet]</ref>
+
+==History==
+
+The index was started at the start of 1976.
+
+In 1983, the CBOE created the first index options, based on its own index, the CBOE 100.
+
+In 1993, CBOE created the Chicago Board Options Exchange Market Volatility Index (VIX), which was computed based on the price of S&P 100 options (at the time these were by far the most heavily traded index options). Then in 2003, they changed it to be based on the S&P 500.
+
+The current record close is 916.73, set on November 24, 2014.
+
+The current all-time intraday high is 918.46, reached on November 21 , 2014.
+
+== Components ==
+{| class="wikitable sortable"
+|-
+! Symbol
+! Name
+|-
+| AAPL
+| [[Apple Inc.]]
+|-
+| ABBV
+| [[AbbVie Inc.]]
+|-
+| ABT
+| [[Abbott Laboratories]]
+|-
+| ACN
+| [[Accenture|Accenture plc]]
+|-
+| AIG
+| [[American International Group|American International Group Inc.]]
+|-
+| ALL
+| [[Allstate|Allstate Corp.]]
+|-
+| AMGN
+| [[Amgen|Amgen Inc.]]
+|-
+| AMZN
+| [[Amazon.com]]
+|-
+| APA
+| [[Apache corp|Apache Corp.]]
+|-
+| APC
+| [[Anadarko Petroleum Corporation]]
+|-
+| AXP
+| [[American Express|American Express Inc.]]
+|-
+| BA
+| [[Boeing|Boeing Co.]]
+|-
+| BAC
+| [[Bank of America|Bank of America Corp]]
+|-
+| BAX
+| [[Baxter International|Baxter International Inc]]
+|-
+| BIIB
+| [[Biogen Idec]]
+|-
+| BK
+| [[Bank of New York]]
+|-
+| BMY
+| [[Bristol-Myers Squibb]]
+|-
+| BRK.B
+| [[Berkshire Hathaway]]
+|-
+| C
+| [[Citigroup|Citigroup Inc]]
+|-
+| CAT
+| [[Caterpillar Inc]]
+|-
+| CL
+| [[Colgate-Palmolive|Colgate-Palmolive Co.]]
+|-
+| CMCSA
+| [[Comcast|Comcast Corporation]]
+|-
+| COF
+| [[Capital one|Capital One Financial Corp.]]
+|-
+| COP
+| [[Conoco Phillips|ConocoPhillips]]
+|-
+| COST
+| [[Costco]]
+|-
+| CSCO
+| [[Cisco Systems]]
+|-
+| CVS
+| [[CVS Caremark]]
+|-
+| CVX
+| [[Chevron (company)|Chevron]]
+|-
+| DD
+| [[DuPont]]
+|-
+| DIS
+| [[The Walt Disney Company]]
+|-
+| DOW
+| [[Dow Chemical]]
+|-
+| DVN
+| [[Devon Energy]]
+|-
+| EBAY
+| [[eBay Inc.]]
+|-
+| EMC
+| [[EMC Corporation]]
+|-
+| EMR
+| [[Emerson Electric|Emerson Electric Co.]]
+|-
+| EXC
+| [[Exelon]]
+|-
+| F
+| [[Ford Motor]]
+|-
+| FB
+| [[Facebook]]
+|-
+| FCX
+| [[Freeport-McMoran]]
+|-
+| FDX
+| [[FedEx]]
+|-
+| FOXA
+| [[Twenty-First Century Fox, Inc]]
+|-
+| GD
+| [[General Dynamics]]
+|-
+| GE
+| [[General Electric|General Electric Co.]]
+|-
+| GILD
+| [[Gilead Sciences]]
+|-
+| GM
+| [[General Motors]]
+|-
+| GOOG
+| [[Google Inc.]]
+|-
+| GS
+| [[Goldman Sachs]]
+|-
+| HAL
+| [[Halliburton]]
+|-
+| HD
+| [[Home Depot]]
+|-
+| HON
+| [[Honeywell]]
+|-
+| HPQ
+| [[Hewlett-Packard|Hewlett Packard Co]]
+|-
+| IBM
+| [[IBM|International Business Machines]]
+|-
+| INTC
+| [[Intel|Intel Corporation]]
+|-
+| JNJ
+| [[Johnson & Johnson|Johnson & Johnson Inc]]
+|-
+| JPM
+| [[JPMorgan Chase & Co|JP Morgan Chase & Co]]
+|-
+| KO
+| [[Coca-Cola|The Coca-Cola Company]]
+|-
+| LLY
+| [[Eli Lilly and Company]]
+|-
+| LMT
+| [[Lockheed-Martin]]
+|-
+| LOW
+| [[Lowe's]]
+|-
+| MA
+| [[Mastercard|Mastercard Inc]]
+|-
+| MCD
+| [[McDonald's|McDonald's Corp]]
+|-
+| MDLZ
+| [[Mondelēz International]]
+|-
+| MDT
+| [[Medtronic|Medtronic Inc.]]
+|-
+| MET
+| [[Metlife|Metlife Inc.]]
+|-
+| MMM
+| [[3M|3M Company]]
+|-
+| MO
+| [[Altria|Altria Group]]
+|-
+| MON
+| [[Monsanto]]
+|-
+| MRK
+| [[Merck & Co.]]
+|-
+| MS
+| [[Morgan Stanley]]
+|-
+| MSFT
+| [[Microsoft]]
+|-
+| NKE
+| [[Nike (company)|Nike]]
+|-
+| NOV
+| [[National Oilwell Varco]]
+|-
+| NSC
+| [[Norfolk Southern Corp.|Norfolk Southern Corp]]
+|-
+| ORCL
+| [[Oracle Corporation]]
+|-
+| OXY
+| [[Occidental Petroleum|Occidental Petroleum Corp.]]
+|-
+| PEP
+| [[Pepsico|Pepsico Inc.]]
+|-
+| PFE
+| [[Pfizer Inc]]
+|-
+| PG
+| [[Procter & Gamble|Procter & Gamble Co]]
+|-
+| PM
+| [[Phillip Morris International]]
+|-
+| QCOM
+| [[Qualcomm|Qualcomm Inc.]]
+|-
+| RTN
+| [[Raytheon|Raytheon Co (NEW)]]
+|-
+| SBUX
+| [[Starbucks|Starbucks Corporation]]
+|-
+| SLB
+| [[Schlumberger]]
+|-
+| SO
+| [[Southern Company]]
+|-
+| SPG
+| [[Simon Property Group|Simon Property Group, Inc.]]
+|-
+| T
+| [[AT&T|AT&T Inc]]
+|-
+| TGT
+| [[Target Corporation|Target Corp.]]
+|-
+| TWX
+| [[Time Warner|Time Warner Inc.]]
+|-
+| TXN
+| [[Texas Instruments]]
+|-
+| UNH
+| [[UnitedHealth Group|UnitedHealth Group Inc.]]
+|-
+| UNP
+| [[Union Pacific#Union Pacific Corporation|Union Pacific Corp.]]
+|-
+| UPS
+| [[United Parcel Service|United Parcel Service Inc]]
+|-
+| USB
+| [[U.S. Bancorp|US Bancorp]]
+|-
+| UTX
+| [[United Technologies Corporation|United Technologies Corp]]
+|-
+| V
+| [[Visa Inc.]]
+|-
+| VZ
+| [[Verizon Communications|Verizon Communications Inc]]
+|-
+| WAG
+| [[Walgreens]]
+|-
+| WFC
+| [[Wells Fargo]]
+|-
+| WMT
+| [[Wal-Mart]]
+|-
+| XOM
+| [[ExxonMobil|Exxon Mobil Corp]]
+|}
+
+<small>(as of March 21, 2014)</small>
+
+==Statistics==
+The average market capitalization (weighted by market capitalization) of the S&P 100 is about twice that of the S&P 500 ($142 bn vs $68 bn as of April 2014). So it is larger than a large-cap index. The "sigma" is usually a bit less, so it goes down less and goes up less. However, the correlation between the two is very high.<ref>[http://books.google.com/books?id=Y62sAgAAQBAJ&pg=PA1#v=onepage&q&f=false Trading Weekly Options: Pricing Characteristics and Short-Term Trading Strategies By Russell Rhoads]</ref>
+
+==Investing==
+This index is tracked by the exchange-traded fund [[iShares S&P 100]] Index ({{NYSE Arca|OEF}}).
+
+==Annual returns==
+{|
+| 2013
+| +27.40
+|-
+| 2012
+| +13.28
+|-
+| 2011
+| +0.86
+|-
+| 2010
+| +10.08
+|-
+| 2009
+| +19.13
+|-
+| 2008
+| &minus;37.06
+|-
+| 2007
+| +3.02
+|-
+| 2006
+| +15.86
+|-
+| 2005
+| &minus;0.92
+|-
+| 2004
+| +4.45
+|-
+| 2003
+| +23.84
+|-
+| 2002
+| &minus;23.88
+|-
+| 2001
+| &minus;14.88
+|-
+| 2000
+| &minus;13.42
+|}<ref>{{cite web|url=http://www.1stock1.com/1stock1_794.htm|title=SP 100 Index Yearly Stock Returns}}</ref>
+
+==See also==
+* [[S&P Global 100]]
+*[[Russell Top 50 Index]]
+
+== References ==
+{{reflist}}
+
+==External links==
+* [http://us.spindices.com/indices/equity/sp-100 Standard & Poor's page on S&P 100 index]
+* [http://finance.yahoo.com/q?s=^OEX Yahoo! Finance page for ^OEX]
+
+{{DEFAULTSORT:SandP 100}}
+[[Category:American stock market indices]]
+[[Category:S&P Dow Jones Indices|0100]]

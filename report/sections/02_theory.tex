@@ -1,0 +1,44 @@
+\section{Theory}\label{sec:theory}
+\subsection{Market efficiency and investor psychology}
+Under semi-strong efficiency, a headline everyone can read should not predict returns~\cite{fama}. Behavioural models disagree: investors under-react to new information, so prices drift with the news, and over-react to a series of similar news, so prices later reverse~\cite{bsv}. If sentiment matters, returns after an unusual shift in tone should continue or reverse.
+
+\subsection{Measuring sentiment}
+FinBERT is a BERT language model adapted to financial text~\cite{araci}. Its financial training texts (Reuters news from 2008--2010 and a 2014 phrase bank) predate the test period, unlike those of newer large language models. For each headline it gives positive, negative and neutral probabilities, and tone is $s=p^{+}-p^{-}\in[-1,1]$. A persistent level of tone is not news, so, following Tetlock et al.~\cite{tetlock2008}, a firm's weekly mean tone $\bar s_{i,t}$ from $n_{i,t}$ headlines is compared with the mean $\mu_{i,t}$ and standard deviation $\sigma_{i,t}$ of its own weekly tone over the previous 52 weeks,
+\begin{equation}\label{eq:abnormal}
+a_{i,t}=\frac{n_{i,t}}{n_{i,t}+k}\cdot\frac{\bar s_{i,t}-\mu_{i,t}}{\sigma_{i,t}},
+\end{equation}
+where $n/(n+k)$, with $k=5$, shrinks the score when few headlines support it ($a=0$ without news). The same measure over all headlines of a sector gives sector sentiment. The weekly scores are smoothed into an exponentially weighted average $M_{i,t}=(1-\lambda)M_{i,t-1}+\lambda\,a_{i,t}$ with a half-life of two weeks ($\lambda=1-2^{-1/2}\approx0.29$). Divided by its typical size across firms, $M$ becomes the \emph{sentiment gauge} $G$, measured in standard deviations. A view opens only when $|G|$ passes an entry band and closes inside a narrower exit band; this hysteresis limits trading~\cite{grinoldkahn}.
+
+\subsection{Forecasting stock returns from prices}
+Four families of price-based forecasts are widely used, with linear regression as the baseline: time-series models (ARIMA); factor composites of 12-month momentum~\cite{jegadeesh}, one-month reversal and low volatility~\cite{grinoldkahn}; and tree ensembles and neural networks such as LSTM, which learns from sequences of past inputs, the strongest machine-learning methods for stock returns~\cite{gukellyxiu}. Forecasts are judged by the rank information coefficient (IC), the weekly rank correlation across stocks between forecast and realised return. The IC measures what the optimiser uses, the ordering of stocks, and scales the expected active return~\cite{grinoldkahn}; squared errors such as MSE are dominated by noise in weekly returns and depend on the scale of each forecast.
+
+\subsection{Portfolio optimisation with views}
+Mean--variance optimisation trades expected return against risk~\cite{markowitz}, but estimation error makes it fragile, and equal weighting is hard to beat~\cite{demiguel}. The Black--Litterman model starts from neutral expected returns implied by a reference portfolio, $\boldsymbol\pi=\delta\boldsymbol\Sigma\mathbf w_{\mathrm{ref}}$, and moves them only where the investor holds views, in proportion to their confidence~\cite{blacklitterman}; without views the optimiser holds the reference portfolio, apart from trading costs. A view's size follows the Grinold--Kahn rule $\alpha_i=\mathrm{IC}\cdot\sigma_i\cdot z_i$, so a signal with no measured skill gets no weight~\cite{grinoldkahn}.
+
+\subsection{Conceptual model and hypotheses}
+Figure~\ref{fig:concept} links the constructs. A hypothesis is supported if the estimate has the expected sign and its 95\% interval excludes zero, and supported in direction only if just the sign agrees.
+\begin{itemize}
+\item[\textbf{H1}] Sentiment moves prices beyond price information: after the gauge crosses its upper (lower) band, abnormal returns over the next 20 trading days are positive (negative) (H1a), and the gauge predicts next-week returns after controlling for price predictors (H1b).
+\item[\textbf{H2}] Correcting the price forecast with sentiment raises net return (H2a) and reduces maximum drawdown (H2b) compared with the price-only forecast, because price signals confirmed by sentiment earn more than contradicted ones (H2c).
+\item[\textbf{H3}] The sentiment-driven allocation has a higher Sharpe ratio after costs than equal weighting, minimum variance and the index.
+\end{itemize}
+\end{multicols}
+\begin{figure}[H]\centering
+\begin{tikzpicture}[node distance=5mm and 7mm, every node/.style={font=\footnotesize, align=center},
+  box/.style={draw, rounded corners=1pt, minimum height=9mm, text width=30mm, fill=#1}, box/.default=white,
+  arr/.style={-{Stealth[length=2mm]}, thick}]
+\node[box=blue!6] (price) {Prices and trading\\(momentum, risk, liquidity)};
+\node[box=green!6, right=of price] (news) {Company headlines\\(FinBERT tone)};
+\node[box, below=of price] (pf) {Price forecast\\(selected model)};
+\node[box=green!6, below=of news] (sg) {Sentiment gauge\\(firm, sector)};
+\node[box=orange!8, below=12mm of pf, text width=30mm] (a) {Confirmation: sentiment\\adjusts the price forecast};
+\node[box=orange!8, below=12mm of sg, text width=30mm] (b) {Driver: views from\\extreme sentiment};
+\node[box=gray!8, anchor=north, text width=70mm] (opt) at ($(a.south)!0.5!(b.south)+(0,-11mm)$) {Black--Litterman + cost-aware optimiser $\rightarrow$ net return, Sharpe, drawdown};
+\draw[arr] (price) -- (pf); \draw[arr] (news) -- (sg); \draw[arr] (pf) -- (a); \draw[arr] (sg) -- (a); \draw[arr] (sg) -- (b);
+\draw[arr] (a.south) -- node[left]{H2} (a.south |- opt.north); \draw[arr] (b.south) -- node[right]{H3} (b.south |- opt.north);
+\node[box=red!6, right=9mm of sg, text width=22mm] (ret) {Stock returns\\(1--8 weeks)};
+\draw[arr, dashed] (sg) -- node[above]{H1} (ret);
+\end{tikzpicture}
+\caption{Conceptual model. Price and news inputs form a price forecast and a sentiment gauge. Sentiment either confirms or contradicts the price-based forecast or drives the views itself. Labels show where each hypothesis is tested.}\label{fig:concept}
+\end{figure}
+\begin{multicols}{2}

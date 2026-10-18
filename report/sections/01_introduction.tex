@@ -1,0 +1,36 @@
+\section{Introduction}\label{sec:intro}
+\subsection{Background}
+Portfolio managers, equity analysts, investment bankers and private investors follow company news closely. Language models such as FinBERT now turn thousands of headlines a week into tone scores at low cost~\cite{araci,kirtac}. It is less clear if this helps a portfolio after costs: under semi-strong efficiency public news is priced quickly~\cite{fama}, while behavioural finance argues that investors under- and over-react, so tone can move prices beyond the facts reported~\cite{bsv,tetlock2007}. Inspired by work that feeds sentiment into allocation through reinforcement learning~\cite{coriat} and the Black--Litterman model~\cite{colasanto}, this study asks whether a transparent, cost-aware optimiser can let sentiment steer a realistic long-only portfolio.
+
+\subsection{Problem statement}
+The stakeholder is a portfolio manager of a weekly rebalanced, long-only mandate in U.S. and euro-area large caps, who must decide whether a news-sentiment layer is worth its data, computing and trading costs, and how it should enter the allocation: as a check that confirms or contradicts an existing price-based forecast, or as the driver of the allocation itself. The decision variable is the weekly weight of each stock. The key performance indicators (KPIs) are net return, Sharpe ratio, maximum drawdown and trading cost, against equal weighting, minimum variance and MSCI World. The universe is the 150 members of the S\&P~100 and EURO STOXX~50 at the end of 2014 (\Firms{} with usable prices), with weekly decisions from 2015 to 2025. The results are also relevant to analysts and investors who use public headlines in their own decisions.
+
+\subsection{Research questions}
+\textbf{Main question:} \emph{How can news sentiment be used in portfolio optimisation to improve the allocation of a weekly, long-only U.S. and euro-area equity portfolio after trading costs?}
+\begin{enumerate}
+\item[\textbf{RQ1}] Does news sentiment carry information about future returns that prices have not yet absorbed, and does its effect persist or reverse?
+\item[\textbf{RQ2}] Does an allocation in which sentiment confirms or contradicts a price-based forecast improve return, risk and drawdown compared with the price-based allocation alone?
+\item[\textbf{RQ3}] Does a sentiment-driven allocation outperform equal weighting, minimum variance and the market index after costs, and how robust is the result to costs, timing and market conditions?
+\end{enumerate}
+
+\subsection{Related work and knowledge gap}
+Table~\ref{tab:literature} summarises the closest studies, and their findings shape the design. Tone is measured against each firm's own history~\cite{tetlock2008}, aggregated weekly and judged over several weeks~\cite{hestonsinha}, and used only from the next trading session, with a delay test, because news about large firms is priced within days~\cite{kekellyxiu}. The reversal reported by Tetlock~\cite{tetlock2007} and Hillert et al.~\cite{hillert} motivates testing continuation against reversal, FinBERT follows Kirtac and Germano~\cite{kirtac}, and the allocations follow Colasanto et al.~\cite{colasanto} (sentiment as views) and Coriat and Benhamou~\cite{coriat} (price, combined and sentiment layers), with equal weighting as prior and benchmark~\cite{demiguel}.
+\end{multicols}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{45mm}>{\raggedright\arraybackslash}X}\toprule
+Study & Data and method & Main finding\\\midrule
+Tetlock~\cite{tetlock2007} & Daily press column, word counts & Media pessimism predicts price pressure followed by reversal\\
+Tetlock et al.~\cite{tetlock2008} & Firm news, negative words & Unusual negative tone predicts lower earnings and returns\\
+Heston and Sinha~\cite{hestonsinha} & Firm news, daily vs.\ weekly & Weekly tone predicts returns for weeks, daily tone only for days\\
+Ke et al.~\cite{kekellyxiu} & Newswires, supervised text model & News is priced within days, fastest for large firms\\
+Hillert et al.~\cite{hillert} & 2.2 million newspaper articles & Coverage amplifies momentum, which later reverses\\
+Kirtac and Germano~\cite{kirtac} & 965,375 articles, FinBERT and LLMs & Transformer sentiment predicts returns better than dictionaries\\
+Colasanto et al.~\cite{colasanto} & BERT sentiment as Black--Litterman views & Sentiment views improved the optimised portfolio\\
+Coriat and Benhamou~\cite{coriat} & Reinforcement learning with LLM sentiment & Combining price and sentiment beat either alone\\
+DeMiguel et al.~\cite{demiguel} & 14 optimisers vs.\ $1/N$ & Estimation error lets $1/N$ win out of sample\\\bottomrule
+\end{tabularx}
+\caption{Related work and its main findings.}\label{tab:literature}
+\end{table}
+\begin{multicols}{2}
+
+These findings come mostly from U.S. long--short portfolios, single train--test splits or returns before costs. The gap is whether they hold inside one long-only, cost-aware optimiser for a transatlantic large-cap universe, with models selected on a separate validation period and news used only when available.

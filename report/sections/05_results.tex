@@ -1,0 +1,61 @@
+\section{Results}\label{sec:results}
+\subsection{Model selection on the validation period}
+No price model forecast weekly returns reliably in 2012--2014 (Table~\ref{tab:selection}, Figure~\ref{fig:selection}). The factor composite had the highest mean rank IC, \ValFactorIC{} ($t=\ValFactorT$), and was selected. The other models were close to zero or negative. The firm + sector gauge had a higher IC than the firm-only gauge (\ValGaugeFirmSectorIC{} against \ValGaugeFirmIC{}) and a positive sign, so it was used for continuation. Adding the weekly abnormal tone to the sentiment correction raised its validation IC from +0.0090 to +0.0108 (gain $t=0.06$), so that version was kept.
+\end{multicols}
+\begin{table}[H]\centering\footnotesize\input{../results/tables/model_selection}
+\caption{Validation results, 2012--2014 (157 weeks). Rank IC with Newey--West (HAC) $t$-statistics; selected models in bold.}\label{tab:selection}\end{table}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{model_selection}
+\caption{Validation of the six price models: mean weekly rank IC with 95\% intervals (left) and cumulative IC (right).}\label{fig:selection}\end{figure}
+\begin{multicols}{2}
+
+\subsection{Sentiment and future returns (RQ1)}
+Figure~\ref{fig:event} follows \EventPosN{} positive and \EventNegN{} negative gauge signals. Most of the abnormal return comes \emph{before} the signal can be traded: \EventPosPre{} and \EventNegPre{} in the ten days up to day~0. After day~0, positive signals drift up by a further \EventPosPost{} over 20 trading days and then fall back (\EventPosPostForty{} from day~0 to day~40), while negative signals move by \EventNegPost{} over 20 days and then recover (\EventNegPostForty{}). The gauge mainly confirms price moves that have already happened. Over 20 days both groups move in the expected direction, but by amounts small relative to the intervals that fade by day~40, so H1a is supported in direction only.
+\end{multicols}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{event_study}
+\caption{Cumulative abnormal return (relative to the equal-weighted return of the stock's region) around gauge signals, 2015--2025, with 95\% intervals. Day~0 is the first close at which the signal can be traded.}\label{fig:event}\end{figure}
+\begin{multicols}{2}
+
+In Fama--MacBeth regressions (Table~\ref{tab:fm}), a one-standard-deviation higher firm gauge predicts a \FMCtrlFirm{} basis points higher relative return the next week after price controls ($t=\FMCtrlFirmT$), \FMUSFirm{} basis points in the United States ($t=\FMUSFirmT$) and \FMEUFirm{} in the euro area ($t=\FMEUFirmT$). Sector sentiment is insignificant. H1b is supported in direction only for firm sentiment. Over horizons of one to eight weeks the gauge's rank IC is near zero, with its highest value, \DecaySentimentFour{} ($t=\DecaySentimentFourT$), four weeks ahead (Figure~\ref{fig:decay}).
+\end{multicols}
+\begin{figure}[H]\centering\includegraphics[width=0.85\textwidth]{decay}
+\caption{Mean rank IC of each signal for returns one to eight weeks after the decision, with 95\% intervals.}\label{fig:decay}\end{figure}
+\begin{table}[H]\centering\footnotesize\input{../results/tables/fama_macbeth}
+\caption{Fama--MacBeth regressions of next-week relative returns on standardised predictors, 2015--2025. Coefficients in basis points per standard deviation, Newey--West $t$-statistics in parentheses.}\label{tab:fm}\end{table}
+\begin{multicols}{2}
+
+\subsection{Sentiment as confirmation of the price forecast (RQ2)}
+In the test period the factor composite kept a small positive IC, \ICPrice{} ($t=\ICPriceT$), while the corrected forecast fell to \ICCombined{} (Table~\ref{tab:forecasts}). Table~\ref{tab:decisions} shows the hit rates behind this result. A signal is \emph{right} when the stock it favours beats the average stock the next week. The price signal and the sentiment gauge were each right about half of the time, whether they agreed or disagreed. When the correction moved a stock to the other side of the average (\DecChangedShare{} of cases), the original price decision would have been right more often than the new one (\DecChangedPrice{} against \DecChangedComb{}). The hit rate counts only signs, while the IC also rewards ordering large moves correctly.
+\end{multicols}
+\begin{table}[H]\centering\footnotesize\input{../results/tables/forecasts}
+\caption{Forecast quality in the test period, 2015--2025: mean weekly rank IC with Newey--West (HAC) $t$-statistics.}\label{tab:forecasts}\end{table}
+\begin{table}[H]\centering\footnotesize
+\begin{tabular}{lccc}\toprule
+\multicolumn{4}{l}{\emph{A. Did each signal pick the right side of the average?}}\\
+Situation & Share of cases & Price signal right & Sentiment right\\\midrule
+Price and sentiment agree & \DecAgreeShare & \DecAgreePrice & \DecAgreeSent\\
+Price and sentiment disagree & \DecDisagreeShare & \DecDisagreePrice & \DecDisagreeSent\\
+Sentiment neutral & \DecNeutralShare & \DecNeutralPrice & \DecNeutralSent\\
+All cases & \DecAllShare & \DecAllPrice & \DecAllSent\\\midrule
+\multicolumn{4}{l}{\emph{B. Decisions changed by the sentiment correction}}\\
+ & Share of cases & Original price decision right & Corrected decision right\\\midrule
+Correction moved the stock to the other side & \DecChangedShare & \DecChangedPrice & \DecChangedComb\\\bottomrule
+\end{tabular}
+\caption{Who was right? One case is one stock in one week, 2015--2025. A signal is right when the stock it favours (penalises) does better (worse) than the average stock the next week; a coin flip is right 50\% of the time. Sentiment agrees or disagrees when its gauge is at least 0.5 s.d. on the same or the opposite side of the price signal; cases with a gauge of exactly zero are left out of ``Sentiment right''.}\label{tab:decisions}\end{table}
+\begin{multicols}{2}
+
+The portfolio results are better than the forecast results (Table~\ref{tab:performance}). The price + sentiment portfolio earned \CombinedCAGR{} a year with a Sharpe ratio of \CombinedSharpe{} and a maximum drawdown of \CombinedDD{}, against \PriceCAGR{}, \PriceSharpe{} and \PriceDD{} for price only; the difference, \BootCombinedPriceCAGR{} percentage points a year, has a 95\% interval of [\BootCombinedPriceCAGRLow, \BootCombinedPriceCAGRHigh] (Table~\ref{tab:uncertainty}). Figure~\ref{fig:mechanism} shows each signal's trailing IC over the test period and where the difference arises: as a simple average, the gain of \NetCombinedPrice{} percentage points a year splits into \GrossCombinedPrice{} before costs and \SavingCombinedPrice{} from lower costs. The before-cost gain came equally from the price portfolio's buy decisions (stocks it overweighted; \SideBuyGain{} percentage points a year, $t=\SideBuyGainT$) and sell decisions (stocks it underweighted; \SideSellGain, $t=\SideSellGainT$). When sentiment enlarged a buy or a sell, the stock moved the intended way in \SideBuyLargerRight{} and \SideSellLargerRight{} of cases; across all adjustments the share was about one half (\SideBuyGood{} and \SideSellGood). H2a and H2b are supported in direction but not statistically, and H2c in direction only: stocks moved \DecAgreeRet{} basis points a week in the price signal's direction when sentiment agreed and \DecDisagreeRet{} when it disagreed (both insignificant).
+\end{multicols}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{allocation_mechanism}
+\caption{Left: measured skill (trailing three-year rank IC, floored at zero) that scales each signal's views. Right: mean annual return difference before costs, from lower costs and after costs (arithmetic, percentage points).}\label{fig:mechanism}\end{figure}
+\begin{multicols}{2}
+
+\subsection{Sentiment as the driver of the allocation (RQ3)}
+When sentiment drives the views alone, the portfolio held about \SentimentHoldings{} stocks with views on \SentimentViews{} of them in an average week; in \ZeroSkillSentiment{} of the weeks the gauge's trailing IC was zero and the optimiser moved towards equal weighting. The portfolio earned \SentimentCAGR{} a year, slightly less than equal weighting (\EWCAGR), but with a Sharpe ratio of \SentimentSharpe{}, against \EWSharpe{} for equal weighting, \MinVarSharpe{} for minimum variance and \IndexSharpe{} for MSCI World (Figure~\ref{fig:wealth}; drawdowns and annual returns in Appendix~\ref{app:annual}). Its maximum drawdown, \SentimentDD{}, was smaller than that of equal weighting (\EWDD{}) and the index (\IndexDD{}). All differences have bootstrap intervals that include zero (Table~\ref{tab:uncertainty}). H3 is supported in direction only.
+\end{multicols}
+\begin{table}[H]\centering\footnotesize\setlength{\tabcolsep}{4pt}\input{../results/tables/performance_main}
+\caption{Net performance, January 2015 to December 2025 (\Weeks{} weeks), 10 bp per trade. CAGR, volatility, costs and alpha in \% a year; turnover is the average weekly one-way turnover in \%; alpha and beta against MSCI World with Newey--West $t$-statistics.}\label{tab:performance}\end{table}
+\begin{table}[H]\centering\footnotesize\setlength{\tabcolsep}{4pt}\input{../results/tables/uncertainty_main}
+\caption{Are the differences real? Each cell shows strategy A minus strategy B (for drawdown, how much smaller A's drawdown was) with its 95\% confidence interval in brackets (paired block bootstrap, 13-week blocks, 2,000 draws). A difference is significant only if its interval excludes zero.}\label{tab:uncertainty}\end{table}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{wealth}
+\caption{Growth of USD~1 after costs, 2015--2025 (log scale).}\label{fig:wealth}\end{figure}
+\begin{multicols}{2}

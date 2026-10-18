@@ -1,0 +1,8 @@
+{
+ "frozen_at_utc": "2026-10-12T14:20:04+00:00",
+ "fingerprint": "92d870eba9dce80a0a06a7fdb167aff1a003ead6fa1565e68056099e986538f1",
+ "price_model": "Factor",
+ "sector_weight": 0.5,
+ "direction": 1,
+ "correction_variant": "gauges_and_weekly_tone"
+}

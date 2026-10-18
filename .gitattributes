@@ -1,0 +1,3 @@
+# Store and check out every file byte for byte. results/frozen.json holds a SHA-256
+# of the code, so line-ending conversion on Windows would make project.py refuse to run.
+* -text

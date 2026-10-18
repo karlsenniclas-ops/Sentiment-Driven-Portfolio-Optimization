@@ -1,0 +1,15 @@
+\section{Universe and news coverage}\label{app:universe}
+Table~\ref{tab:universe} lists the firms with their accepted headlines for October 2010--December 2025; Figure~\ref{fig:coverage} shows the average number of headlines per firm and week by sector and year.
+\begin{table}[p]\centering\tiny\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{0.92}\input{../results/tables/universe_main}
+\caption{Research universe: members of the S\&P~100 and EURO STOXX~50 on 31 December 2014 with usable price histories, and their accepted headlines.}\label{tab:universe}\end{table}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{coverage}
+\caption{Accepted headlines per firm and week, by sector and year.}\label{fig:coverage}\end{figure}
+
+\section{Drawdowns and annual returns}\label{app:annual}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{drawdown}
+\caption{Drawdown from the previous peak after costs, 2015--2025.}\label{fig:drawdown}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{annual}
+\caption{Net annual returns by strategy and year.}\label{fig:annual}\end{figure}
+
+\section{Reproduction}\label{app:code}
+{\sloppy All results, tables and figures are produced from the stored data by \texttt{project.py} in four stages: \texttt{validate-price} and \texttt{validate-sentiment} (2012--2014 only), \texttt{freeze}, which stores a SHA-256 fingerprint of the code, settings and validation choices, and \texttt{test}, which refuses to run if anything changed after freezing and runs only once. Package versions and input file hashes are recorded in \texttt{results/test\_run.json}.\par}

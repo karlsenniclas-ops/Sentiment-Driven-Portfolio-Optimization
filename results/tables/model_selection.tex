@@ -1,0 +1,15 @@
+\begin{tabular}{lrrr}
+\toprule
+Model & Mean rank IC & HAC $t$ & Weeks IC $>0$ (\%) \\
+\midrule
+Ridge regression & -0.0040 & -0.25 & 49.7 \\
+\textbf{Factor composite} & +0.0090 & 0.39 & 54.1 \\
+ARIMA & -0.0038 & -0.39 & 47.1 \\
+Random forest & -0.0000 & -0.00 & 52.2 \\
+Gradient boosting & +0.0018 & 0.20 & 49.7 \\
+LSTM & -0.0031 & -0.13 & 47.1 \\
+\midrule
+Sentiment gauge, firm only & +0.0039 & 0.60 & 51.6 \\
+\textbf{Sentiment gauge, firm + sector} & +0.0125 & 0.98 & 55.4 \\
+\bottomrule
+\end{tabular}
