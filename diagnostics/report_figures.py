@@ -10,7 +10,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from pipeline.config import FIG, OUT, ROOT, TABLE  # noqa: E402
+from pipeline.config import OUT, ROOT, TABLE  # noqa: E402
 from pipeline.data import load_universe  # noqa: E402
 from pipeline.news import attach_scores, load_headlines  # noqa: E402
 from pipeline.outputs import COLORS, DATA_BLUE, REFERENCE, plt, save  # noqa: E402

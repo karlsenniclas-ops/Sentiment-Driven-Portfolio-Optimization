@@ -1,7 +1,6 @@
 """Download daily prices (adjusted and unadjusted close, volume) from Yahoo Finance."""
 import sys, time
 from pathlib import Path
-import pandas as pd
 import yfinance as yf
 sys.path.insert(0, str(Path(__file__).parent))
 import universe_spec as u
@@ -14,7 +13,8 @@ for t in tickers:
     path = OUT / f"{t.replace('=', '_')}.csv"
     if path.exists():
         continue
-    for attempt in range(4):
+    d = None
+    for _ in range(4):
         try:
             d = yf.download(t, start="2004-11-01", end="2026-01-10", progress=False, auto_adjust=False,
                             actions=False, threads=False)

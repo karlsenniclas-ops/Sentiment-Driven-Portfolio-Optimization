@@ -1,0 +1,26 @@
+\begin{tabular}{lcc}
+\toprule
+ & High coverage & Low coverage \\
+\midrule
+Share of sentiment views & 68\% & 32\% \\
+Gauge rank IC ($t$) & -0.0002 (-0.03) & +0.0003 (0.04) \\
+Return in view direction, bp/week ($t$) & -0.3 (-0.09) & +1.6 (0.22) \\
+Contribution vs equal weight, pp/year ($t$) & +0.54 (0.69) & -0.84 (-0.75) \\
+Firm gauge, Fama--MacBeth, bp ($t$) & +1.5 (1.00) & -0.1 (-0.05) \\
+\midrule
+\multicolumn{3}{l}{\emph{Sentiment-driven portfolio with views restricted by coverage}}\\
+Variant & CAGR (\%) / Sharpe & Views per week \\
+\midrule
+Base case & 11.90 / 0.64 & 20.2 \\
+Views only for high-coverage firms & 12.50 / 0.67 & 13.3 \\
+Views only for low-coverage firms & 13.04 / 0.70 & 6.9 \\
+No views below 1 headline a week & 11.97 / 0.64 & 18.1 \\
+\midrule
+\multicolumn{3}{l}{\emph{Price + sentiment portfolio with the correction restricted by coverage}}\\
+\midrule
+Base case & 12.20 / 0.65 & -- \\
+Correction only for high-coverage firms & 12.07 / 0.65 & -- \\
+Correction only for low-coverage firms & 10.82 / 0.58 & -- \\
+No correction below 1 headline a week & 12.29 / 0.65 & -- \\
+\bottomrule
+\end{tabular}

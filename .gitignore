@@ -17,3 +17,6 @@ report/*.out
 report/*.synctex.gz
 report/*.fdb_latexmk
 report/*.fls
+
+# Downloaded on first use by diagnostics/news_quality.py (licence not stated, so not redistributed)
+data/sentfin/

@@ -1,4 +1,4 @@
-\documentclass{elsword}   % Elsevier article layout (LaTeX version of the Elsevier Word template)
+\documentclass{elsword}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{booktabs,array,tabularx}
@@ -13,11 +13,11 @@
 \author{Niclas Karlsen}
 \affiliation{Norwegian University of Life Sciences, REALTEK, Industrial Economics (IND\O K)}
 \email{nikar1253@nmbu.no}
-\keywords{portfolio optimization; news sentiment; FinBERT; Black--Litterman; walk-forward backtest; asset management}
+\keywords{portfolio optimization; headline sentiment; Google News; FinBERT; Black--Litterman; walk-forward backtest; asset management}
 
 \begin{document}
 \begin{abstract}
-This study tests whether news sentiment can improve a weekly long-only equity allocation after trading costs. It scores \Headlines{} company headlines with FinBERT for the members of the S\&P~100 and EURO STOXX~50 and turns them into firm and sector sentiment gauges. Following CRISP-DM, all models were selected on 2012--2014 and tested once on 2015--2025 with 10 basis points per trade. Sentiment enters a Black--Litterman optimiser either as a correction of a price forecast or as the sole source of views. Sentiment signals mostly followed price moves and showed no lasting continuation. The correction did not improve forecast accuracy but raised net return by \BootCombinedPriceCAGR{} percentage points a year. The sentiment-driven portfolio had a Sharpe ratio marginally above equal weighting, minimum variance and MSCI World but a slightly lower return, and no difference was statistically significant. The gains are small but economically relevant for a long-only investor. Headline sentiment works best as a check on a price-based allocation and is weak as a stand-alone source of alpha.
+A portfolio manager of a weekly rebalanced, long-only U.S. and euro-area equity mandate must decide whether news sentiment is worth adding to the allocation, and how. This study tests two uses of Google News headline sentiment, measured by FinBERT, in a cost-aware Black--Litterman optimiser: as a correction of a price forecast and as the only source of views. It scores \Headlines{} company headlines for the members of the S\&P~100 and EURO STOXX~50 and, following CRISP-DM, selects all models on 2012--2014 before a single test on 2015--2025 with 10 basis points per trade. Sentiment signals mostly followed price moves and showed no lasting continuation. The correction did not improve forecast accuracy but raised net return by \BootCombinedPriceCAGR{} percentage points a year (95\% interval \BootCombinedPriceCAGRLow{} to \BootCombinedPriceCAGRHigh), and the gain came from heavily covered firms. The sentiment-driven portfolio had a Sharpe ratio of \SentimentSharpe{} against \EWSharpe{} for equal weighting, with a slightly lower return, and this edge disappeared when repeated headlines were removed. No difference was statistically significant. The headlines were retrieved in 2026, so the archive may favour stories that stayed online or later proved important; a check against dated U.S. headlines found no sign of this. For a portfolio manager, headline sentiment is useful as a check on a price-based allocation and weak as a stand-alone source of alpha.
 \end{abstract}
 \maketitle
 \begin{multicols}{2}
@@ -31,12 +31,11 @@ This study tests whether news sentiment can improve a weekly long-only equity al
 \input{sections/07_discussion}
 \input{sections/08_conclusion}
 
-\end{multicols}
-\appendix
-\input{sections/09_appendix}
-\begin{multicols}{2}
-
 \bibliographystyle{elsarticle-num}
 \bibliography{references}
 \end{multicols}
+
+\clearpage
+\appendix
+\input{sections/09_appendix}
 \end{document}

@@ -1,7 +1,7 @@
 """Post-test diagnostic: how often the price signal and the sentiment gauge were right about a stock's
 next-week relative return, and what happened when sentiment changed the price-based decision.
 Rebuilds the frozen signals from cached inputs (results/frozen.json); it does not re-run or change the test.
-Writes results/tables/decisions.tex and adds macros to results/tables/extra_numbers.tex.
+Adds the numbers of Table 7 in the report as macros to results/tables/extra_numbers.tex.
 Usage: python diagnostics/decision_table.py"""
 import json
 import sys
@@ -12,7 +12,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from pipeline import forecast as fc  # noqa: E402
-from pipeline.config import OUT, TABLE  # noqa: E402
+from pipeline.config import OUT  # noqa: E402
 from pipeline.run import cached, market_inputs, news_inputs, signals, test_indices  # noqa: E402
 from diagnostics.report_figures import write_macros  # noqa: E402
 
@@ -50,29 +50,19 @@ def main():
                 weekly[k].append({m: np.nanmean([x[m] for x in v]) if m == "sent_right" else np.mean([x[m] for x in v])
                                   for m in ("price_right", "sent_right", "comb_right", "ret")})
     total = len(rows["all"])
-    labels = {"all": "All stock-weeks", "agree": "Sentiment agrees with price", "neutral": "Sentiment neutral",
-              "disagree": "Sentiment disagrees with price", "changed": "Correction changed the side"}
-    lines = [r"\begin{tabular}{lrrrrr}", r"\toprule",
-             r"Situation & Share (\%) & Price right (\%) & Sentiment right (\%) & Corrected right (\%) & Return (bp) \\",
-             r"\midrule"]
     macros = {}
-    for key, label in labels.items():
+    for key in rows:
         v, w = rows[key], weekly[key]
         share = len(v) / total * 100
         pr = np.mean([x["price_right"] for x in w]) * 100
         sr = np.nanmean([x["sent_right"] for x in w]) * 100
         cr = np.mean([x["comb_right"] for x in w]) * 100
         ret = np.mean([x["ret"] for x in w]) * 1e4
-        lines.append(f"{label} & {share:.1f} & {pr:.1f} & {sr:.1f} & {cr:.1f} & {ret:+.1f} \\\\")
         tag = key.capitalize()
         macros.update({f"Dec{tag}Share": f"{share:.0f}\\%", f"Dec{tag}Price": f"{pr:.1f}\\%",
                        f"Dec{tag}Sent": f"{sr:.1f}\\%", f"Dec{tag}Comb": f"{cr:.1f}\\%", f"Dec{tag}Ret": f"{ret:+.1f}"})
-        if key == "all":
-            lines.append(r"\midrule")
-    lines += [r"\bottomrule", r"\end{tabular}"]
-    (TABLE / "decisions.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     write_macros(macros)
-    print("\n".join(lines))
+    print(macros)
 
 
 if __name__ == "__main__":

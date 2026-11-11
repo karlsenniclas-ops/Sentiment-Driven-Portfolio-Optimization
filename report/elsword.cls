@@ -1,6 +1,6 @@
 %% elsword.cls -- LaTeX version of the Elsevier Word article template used for this report.
 %% US Letter, 1.41 in side and 1.25 in top/bottom margins, two columns (0.33 in gap), Times,
-%% 9 pt text on 10 pt leading, 10 pt bold section and italic subsection headings, 8 pt captions,
+%% 9 pt text on 10.5 pt leading, 10 pt bold section and italic subsection headings, 8 pt captions,
 %% tables and references, one-column front matter with rules around the abstract.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{elsword}[2026/10/12 Elsevier Word-template layout]
@@ -25,8 +25,8 @@
 
 %% ---- font sizes (Word template: body 9/10 pt, tables, captions and references 8 pt)
 \renewcommand\normalsize{\@setfontsize\normalsize{9}{10.5}%
-  \abovedisplayskip 6pt plus 2pt minus 2pt\belowdisplayskip\abovedisplayskip
-  \abovedisplayshortskip 3pt plus 1pt\belowdisplayshortskip 3pt plus 1pt}
+  \abovedisplayskip 8pt plus 2pt minus 2pt\belowdisplayskip\abovedisplayskip
+  \abovedisplayshortskip 5pt plus 2pt\belowdisplayshortskip 5pt plus 2pt}
 \renewcommand\small{\@setfontsize\small{8.5}{10}}
 \renewcommand\footnotesize{\@setfontsize\footnotesize{8}{9.5}}
 \renewcommand\scriptsize{\@setfontsize\scriptsize{7}{8.5}}
@@ -36,13 +36,12 @@
 \setlength\parskip{0pt}
 \setlength\footnotesep{8pt}
 \setlength\intextsep{8pt plus 2pt minus 2pt}
-
-
-
-
-
-
-
+%% math: keep the space around binary operators and relations when lines are justified, and avoid
+%% breaking inline formulas across lines
+\medmuskip=4mu plus 2mu minus 1mu
+\thickmuskip=5mu plus 3mu minus 1mu
+\binoppenalty=9999
+\relpenalty=9999
 
 %% ---- headings: "1. Introduction" (10 pt bold), "1.1. Background" (10 pt italic)
 \renewcommand\thesection{\arabic{section}}

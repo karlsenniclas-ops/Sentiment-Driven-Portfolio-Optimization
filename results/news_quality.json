@@ -1,0 +1,99 @@
+{
+ "finbert": {
+  "headlines": 7906,
+  "accuracy": 0.7314697697950924,
+  "macro_f1": 0.7339418517717361,
+  "recall": {
+   "positive": 0.7025026436376454,
+   "neutral": 0.7515781656145563,
+   "negative": 0.7432659932659933
+  },
+  "precision": {
+   "positive": 0.8191533086724209,
+   "neutral": 0.6376811594202898,
+   "negative": 0.7681600695954763
+  },
+  "confusion": {
+   "positive": {
+    "positive": 1993,
+    "neutral": 652,
+    "negative": 192
+   },
+   "neutral": {
+    "positive": 328,
+    "neutral": 2024,
+    "negative": 341
+   },
+   "negative": {
+    "positive": 112,
+    "neutral": 498,
+    "negative": 1766
+   }
+  },
+  "opposite_sign_share": 0.07482156042333252,
+  "strong_tone_correct": 0.8339230950695918,
+  "strong_tone_share": 0.5361750569187959
+ },
+ "repeats": {
+  "headlines": 661986,
+  "reproduction_gap": 2.184918912462308e-13,
+  "0.5": {
+   "repeats": 33267,
+   "repeat_share": 0.05025332862024268,
+   "gauge_correlation": 0.9902069973613299,
+   "strategies": {
+    "Sentiment": {
+     "cagr": 0.10790571042997454,
+     "volatility": 0.17149557110789357,
+     "sharpe": 0.5678238869417261,
+     "sortino": 0.7920523681187946,
+     "max_drawdown": -0.3359274945237528,
+     "sharpe_vs_base_ci": [
+      -0.14023357819004748,
+      0.008161196204650036
+     ]
+    },
+    "Combined": {
+     "cagr": 0.12377706813340339,
+     "volatility": 0.16909012481024385,
+     "sharpe": 0.657195683310333,
+     "sortino": 0.9430278617136053,
+     "max_drawdown": -0.30764840865858023,
+     "sharpe_vs_base_ci": [
+      -0.052156671490636686,
+      0.0722556796188763
+     ]
+    }
+   }
+  },
+  "0.7": {
+   "repeats": 10827,
+   "repeat_share": 0.016355330777388044,
+   "gauge_correlation": 0.9975614006516561,
+   "strategies": {
+    "Sentiment": {
+     "cagr": 0.11620411811242137,
+     "volatility": 0.16877048627111116,
+     "sharpe": 0.6184831044002728,
+     "sortino": 0.8638465373559983,
+     "max_drawdown": -0.31542354060896294,
+     "sharpe_vs_base_ci": [
+      -0.06136765968981335,
+      0.024468508121430373
+     ]
+    },
+    "Combined": {
+     "cagr": 0.12237491444277859,
+     "volatility": 0.169602237161793,
+     "sharpe": 0.6482934066627329,
+     "sortino": 0.9314527152051665,
+     "max_drawdown": -0.30486684255837815,
+     "sharpe_vs_base_ci": [
+      -0.029990151762131986,
+      0.029140458694787128
+     ]
+    }
+   }
+  }
+ }
+}
