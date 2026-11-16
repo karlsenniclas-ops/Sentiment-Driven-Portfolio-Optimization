@@ -1,65 +1,29 @@
 # Sentiment-Driven Portfolio Optimization: Do Headlines Pay After Costs?
 
-IND310 Driftsoptimalisering, NMBU. A weekly, long-only portfolio of the S&P 100 and EURO STOXX 50 members of
-31 Dec 2014 (141 firms with usable prices), where Google News headline sentiment, measured by FinBERT,
-either corrects a price-based forecast or drives the allocation on its own. Models are chosen on 2012-2014 and tested once on 2015-2025 with
-10 basis points per trade. The report is `Sentiment_Driven_Portfolio_Optimization.pdf`.
+IND310 Driftsoptimalisering course project, NMBU. Tests whether Google News headline sentiment, measured by
+FinBERT, improves a weekly long-only portfolio of 141 U.S. and euro-area large caps after trading costs.
+Models were chosen on 2012-2014 and tested once on 2015-2025. The report is
+`Sentiment_Driven_Portfolio_Optimization.pdf`.
 
 ## Run it
 ```
 pip install -r requirements.txt
 python project.py
 ```
-This one command reproduces the test and the tables and figures built from it, from the stored data. It checks
-the code and validation choices against the frozen record, runs the 2015-2025 test, builds the post-test
-diagnostics, compares the key results with the stored ones and, if `pdflatex` and `bibtex` are installed,
-compiles the report. It takes about an hour on a laptop; no internet connection or GPU is needed. The three
-checks added after the first draft run separately (see below).
+Reproduces the test, tables, figures and report from the stored data (about an hour on a laptop). The test
+refuses to run if the code or choices changed after the validation freeze. The checks added after the first
+draft run separately: `diagnostics/coverage.py`, `diagnostics/fnspid_check.py` and `diagnostics/news_quality.py`.
 
-## Folder structure
+## Structure
 ```
-project.py            one-command run and the research protocol stages
-pipeline/             the model (frozen): settings, data, news, sentiment, forecasts, optimiser, evaluation
-diagnostics/          post-test tables, figures and checks (use the frozen models, change no choice)
-data_collection/      scripts that collected the data (Yahoo prices, Google News headlines, FinBERT scores)
-data/                 stored inputs: prices, FX, risk-free rate, universe, headlines, FinBERT scores (.gz),
-                      FNSPID headlines for the check in Appendix C
-results/              selection.json, frozen.json, test outputs, tables/ and figures/
-report/               LaTeX source of the report (elsword.cls = Elsevier Word layout in LaTeX)
+project.py        one-command run and research protocol
+pipeline/         the frozen model
+diagnostics/      post-test tables, figures and checks
+data_collection/  scripts that collected the data
+data/             stored inputs
+results/          test outputs, tables and figures
+report/           LaTeX source of the report
 ```
-
-## Research protocol
-```
-python project.py validate-price       choose the price forecasting model on 2012-2014 (IC)
-python project.py validate-sentiment   choose the sentiment gauge and its sign on 2012-2014
-python project.py freeze               SHA-256 fingerprint of code, settings and choices
-python project.py test                 the single test run, 2015-2025
-python project.py diagnostics          post-test tables and figures
-python project.py report               compile report/main.pdf
-python project.py hashes               SHA-256 of every input file
-python diagnostics/coverage.py         news-coverage checks (report Section 6.3), about 10 minutes
-python diagnostics/fnspid_check.py     check of the Google archive against dated headlines (Appendix C)
-python diagnostics/news_quality.py     FinBERT on annotated headlines and repeated headlines (Appendix C)
-```
-`test` refuses to run if the code or choices changed after `freeze`, and refuses a second run.
-The original freeze (11 Oct 2026) and test run are kept in `results/original_run/`. On 12 Oct 2026 the
-repository was repackaged (one-command run, compressed FinBERT scores, renamed folders and comments) without
-changing the model; the freeze was renewed and the full run reproduced the stored results.
-
-## Checks added after the first draft (10-11 Nov 2026)
-All three use the frozen data preparation, signals and optimiser; `coverage.py` and `news_quality.py` first
-reproduce the stored base case. `pipeline/` and `project.py` are unchanged, so the freeze fingerprint still matches.
-- `diagnostics/coverage.py` (Section 6.3): how often Google News's limit of 100 items per query binds, results for
-  high- and low-coverage firms, views restricted by coverage, and whether weeks without news are neutral.
-- `diagnostics/fnspid_check.py` (Appendix C.1): compares the Google archive with FNSPID (Dong, Fan and Peng, 2024;
-  CC BY 4.0), dated U.S. headlines from Nasdaq.com and Benzinga to 2023. `data_collection/fetch_fnspid.py`
-  rebuilds `data/fnspid/fnspid.csv.gz` (streams 23 GB).
-- `diagnostics/news_quality.py` (Appendix C.2-C.3): FinBERT's accuracy on SEntFiN 1.0 (Sinha et al., 2022;
-  downloaded to `data/sentfin/` on first use, not stored here) and the portfolios rebuilt without repeated
-  headlines. Needs `torch` and `transformers`; about 20 minutes.
-
-Collecting the data again (`data_collection/`) is not needed to reproduce the results and gives slightly
-different data, because Yahoo and Google News change over time.
 
 ## Results (2015-2025, 10 bp per trade)
 | Strategy | CAGR | Sharpe | Max drawdown |
@@ -71,4 +35,4 @@ different data, because Yahoo and Google News change over time.
 | Equal weight | 12.15% | 0.63 | -36.7% |
 | MSCI World (URTH) | 11.18% | 0.60 | -32.7% |
 
-No difference is statistically significant (paired block bootstrap); see the report and `results/analysis.json`.
+No difference is statistically significant (paired block bootstrap).
