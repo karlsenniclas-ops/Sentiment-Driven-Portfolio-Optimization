@@ -1,13 +1,13 @@
 \section{Theory}\label{sec:theory}
 \subsection{Market efficiency and investor psychology}
-Under semi-strong efficiency, a headline everyone can read should not predict returns~\cite{fama}. In behavioural models, investors under-react to new information, so prices drift with the news, and over-react to a series of similar news, so prices later reverse~\cite{bsv}. If sentiment matters, returns after an unusual shift in tone should continue or reverse.
+Under semi-strong efficiency, a headline everyone can read should not predict returns~\cite{fama}. In behavioural models, investors under-react to new information, so prices drift with the news, and over-react to a series of similar news, so prices later reverse~\cite{bsv}. Media tone itself can move prices temporarily~\cite{tetlock2007,hillert}. After an unusual shift in tone, efficiency thus predicts no further move once the news is public, under-reaction a drift and over-reaction a reversal.
 
 \subsection{Measuring sentiment}
-FinBERT is a BERT language model adapted to financial text~\cite{araci}. Its financial training texts (Reuters news from 2008--2010 and a 2014 bank of single news sentences, close in length to headlines) predate the test period, unlike those of newer large language models. For each headline it gives positive, negative and neutral probabilities, and tone is $s = p^{+} - p^{-} \in [-1, 1]$. A persistent level of tone is not news, so, following Tetlock et al.~\cite{tetlock2008}, a firm's weekly mean tone $\bar s_{i,t}$ from $n_{i,t}$ headlines is compared with the mean $\mu_{i,t}$ and standard deviation $\sigma_{i,t}$ of its own weekly tone over the previous 52 weeks,
+FinBERT is a BERT language model adapted to financial text~\cite{araci}. Its financial training texts, Reuters news from 2008--2010 and short news sentences from 2014, predate the test period, unlike those of newer large language models. For each headline it gives positive, negative and neutral probabilities, and tone is $s = p^{+} - p^{-} \in [-1, 1]$. A persistent level of tone is not news, so, following Tetlock et al.~\cite{tetlock2008}, a firm's weekly mean tone $\bar s_{i,t}$ from $n_{i,t}$ headlines is compared with the mean $\mu_{i,t}$ and standard deviation $\sigma_{i,t}$ of its own weekly tone over the previous 52 weeks,
 \begin{equation}\label{eq:abnormal}
 a_{i,t} = \frac{n_{i,t}}{n_{i,t} + k} \cdot \frac{\bar s_{i,t} - \mu_{i,t}}{\sigma_{i,t}} ,
 \end{equation}
-where $n/(n + k)$, with $k = 5$, shrinks the score when few headlines support it ($a = 0$ without news). The same measure over all headlines of a sector gives sector sentiment. The weekly scores are smoothed into an exponentially weighted average,
+where $n/(n + k)$, with $k = 5$, shrinks the score when few headlines support it ($a = 0$ without news or with under ten earlier news weeks; the ratio is capped at $\pm 4$). The same measure over all headlines of a sector gives sector sentiment. The weekly scores are smoothed into an exponentially weighted average,
 \begin{equation}\label{eq:smoothing}
 M_{i,t} = (1 - \lambda)\, M_{i,t-1} + \lambda\, a_{i,t} ,
 \end{equation}

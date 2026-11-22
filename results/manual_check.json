@@ -1,0 +1,36 @@
+{
+ "n": 100,
+ "agreement": 0.59,
+ "agreement_reweighted": 0.4665344370997003,
+ "spearman": 0.680645578757865,
+ "finbert_label_shares": {
+  "positive": 0.18725410920905206,
+  "neutral": 0.6427898021270346,
+  "negative": 0.1699560886639133
+ },
+ "unsure": 13,
+ "opposite_sign": 4,
+ "polar_pairs": 53,
+ "precision_by_finbert_label": {
+  "positive": 0.8285714285714286,
+  "neutral": 0.3333333333333333,
+  "negative": 0.5714285714285714
+ },
+ "matrix_rows_mine_cols_finbert": {
+  "positive": {
+   "neutral": 17,
+   "positive": 29,
+   "negative": 3
+  },
+  "neutral": {
+   "positive": 5,
+   "neutral": 10,
+   "negative": 12
+  },
+  "negative": {
+   "neutral": 3,
+   "negative": 20,
+   "positive": 1
+  }
+ }
+}

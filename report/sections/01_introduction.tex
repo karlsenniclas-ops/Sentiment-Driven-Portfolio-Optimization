@@ -1,6 +1,6 @@
 \section{Introduction}\label{sec:intro}
 \subsection{Background}
-Investors and analysts follow company news closely. Language models such as FinBERT now turn thousands of headlines a week into tone scores at low cost~\cite{araci,kirtac}. It is less clear whether this helps a portfolio after costs: under semi-strong efficiency public news is priced quickly~\cite{fama}, while behavioural finance argues that investors under- and over-react, so tone can move prices beyond the facts reported~\cite{bsv,tetlock2007}. Inspired by work that feeds sentiment into allocation through reinforcement learning~\cite{coriat} and the Black--Litterman model~\cite{colasanto}, this study asks whether a transparent, cost-aware optimiser can let sentiment steer a realistic long-only portfolio.
+Language models such as FinBERT now turn thousands of headlines a week into tone scores at low cost~\cite{araci,kirtac}. It is less clear whether this helps a portfolio after costs: under semi-strong efficiency public news is priced quickly~\cite{fama}, while behavioural finance argues that investors under- and over-react, so tone can move prices beyond the facts reported~\cite{bsv,tetlock2007}. Managers who read the news share these biases, which NBIM, for example, aims to limit through systematic analysis~\cite{nbim2025}. Inspired by work that feeds sentiment into allocation through reinforcement learning~\cite{coriat} and the Black--Litterman model~\cite{colasanto}, this study asks whether a transparent, cost-aware optimiser can let sentiment steer a realistic long-only portfolio, and whether any benefit shows in return or in risk.
 
 \subsection{Problem statement}
 The stakeholder is a portfolio manager of a weekly rebalanced, long-only mandate in U.S. and euro-area large caps, who must decide whether a headline-sentiment layer is worth its data, computing and trading costs, and how it should enter the allocation: as a check that confirms or contradicts an existing price-based forecast, or as the driver of the allocation itself. The decision variable is the weekly weight of each stock. The key performance indicators (KPIs) are net return, Sharpe ratio, maximum drawdown and trading cost, against equal weighting, minimum variance and MSCI World. The universe is the 150 members of the S\&P~100 and EURO STOXX~50 at the end of 2014 (\Firms{} with usable prices), with weekly decisions from 2015 to 2025.
@@ -16,7 +16,7 @@ Here, news sentiment means \emph{Google News headline sentiment measured by FinB
 \end{enumerate}
 
 \subsection{Related work and knowledge gap}
-The closest studies (Table~\ref{tab:literature}) shape the design. Tone is measured against each firm's own history~\cite{tetlock2008}, aggregated weekly~\cite{hestonsinha} and used only from the next session, with a delay test~\cite{kekellyxiu}. Reported reversals~\cite{tetlock2007,hillert} motivate testing continuation against reversal, FinBERT follows Kirtac and Germano~\cite{kirtac}, and the allocations follow Colasanto et al.~\cite{colasanto} and Coriat and Benhamou~\cite{coriat}, with equal weighting as prior and benchmark~\cite{demiguel}.
+The closest studies (Table~\ref{tab:literature}) shape the design. Tone is measured against each firm's own history~\cite{tetlock2008}, aggregated weekly~\cite{hestonsinha} and used only from the next session, with a delay test~\cite{kekellyxiu}. The allocations follow Colasanto et al.~\cite{colasanto} and Coriat and Benhamou~\cite{coriat}, with equal weighting as prior and benchmark~\cite{demiguel}.
 \end{multicols}
 \begin{table}[H]\centering\footnotesize
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{45mm}>{\raggedright\arraybackslash}X}\toprule
@@ -27,6 +27,7 @@ Heston and Sinha~\cite{hestonsinha} & Firm news, daily vs.\ weekly & Weekly tone
 Ke et al.~\cite{kekellyxiu} & Newswires, supervised text model & News is priced within days, fastest for large firms\\
 Hillert et al.~\cite{hillert} & 2.2 million newspaper articles & Coverage amplifies momentum, which later reverses\\
 Kirtac and Germano~\cite{kirtac} & 965,375 articles, FinBERT and LLMs & Transformer sentiment predicts returns better than dictionaries\\
+Lindberg~\cite{lindberg} & Oslo Stock Exchange quarterly reports, FinBERT & Tone is weakly linked to stock performance, more strongly to past performance\\
 Colasanto et al.~\cite{colasanto} & BERT sentiment as Black--Litterman views & Sentiment views improved the optimised portfolio\\
 Coriat and Benhamou~\cite{coriat} & Reinforcement learning with LLM sentiment & Combining price and sentiment beat either alone\\
 DeMiguel et al.~\cite{demiguel} & 14 optimisers vs.\ $1/N$ & Estimation error lets $1/N$ win out of sample\\\bottomrule

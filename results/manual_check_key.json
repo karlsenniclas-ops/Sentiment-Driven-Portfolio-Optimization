@@ -1,0 +1,802 @@
+[
+ {
+  "id": 1,
+  "ticker": "DD",
+  "date": "2024-02-02",
+  "title": "DuPont celebrates five decades of Cyrel",
+  "finbert": "positive",
+  "tone": 0.6157
+ },
+ {
+  "id": 2,
+  "ticker": "MA",
+  "date": "2024-06-13",
+  "title": "Visa, Mastercard $30 billion fee settlement in peril",
+  "finbert": "neutral",
+  "tone": 0.0833
+ },
+ {
+  "id": 3,
+  "ticker": "MET",
+  "date": "2025-01-05",
+  "title": "Sumon Agency gets MetLife's best agency award",
+  "finbert": "positive",
+  "tone": 0.8855
+ },
+ {
+  "id": 4,
+  "ticker": "NKE",
+  "date": "2018-05-23",
+  "title": "Nike Stocks Reach All-Time High Despite Ongoing Scandal",
+  "finbert": "positive",
+  "tone": 0.9063
+ },
+ {
+  "id": 5,
+  "ticker": "WMT",
+  "date": "2015-01-28",
+  "title": "Walmart managers charged with taking thousands from cash registers",
+  "finbert": "negative",
+  "tone": -0.8175
+ },
+ {
+  "id": 6,
+  "ticker": "XOM",
+  "date": "2025-03-03",
+  "title": "Venezuela ratchets up tensions with Guyana over Exxon Mobil megaproject",
+  "finbert": "negative",
+  "tone": -0.8596
+ },
+ {
+  "id": 7,
+  "ticker": "DIS",
+  "date": "2016-08-18",
+  "title": "Guy Fieri Is Taking Disney World to Flavortown",
+  "finbert": "neutral",
+  "tone": 0.0632
+ },
+ {
+  "id": 8,
+  "ticker": "HD",
+  "date": "2019-09-11",
+  "title": "Why Home Depot's Second Quarter Was Better Than It Looked",
+  "finbert": "neutral",
+  "tone": 0.2294
+ },
+ {
+  "id": 9,
+  "ticker": "WMT",
+  "date": "2024-10-18",
+  "title": "Walmart reaches settlement deal for shareholder lawsuits over its handling of opioids",
+  "finbert": "negative",
+  "tone": -0.9189
+ },
+ {
+  "id": 10,
+  "ticker": "LMT",
+  "date": "2019-12-04",
+  "title": "Lockheed Martin awarded $998 million hypersonic ARRW missile contract",
+  "finbert": "positive",
+  "tone": 0.9075
+ },
+ {
+  "id": 11,
+  "ticker": "ITX.MC",
+  "date": "2022-10-13",
+  "title": "Inditex's UK MD on the UK's biggest Zara store",
+  "finbert": "neutral",
+  "tone": 0.1134
+ },
+ {
+  "id": 12,
+  "ticker": "MCD",
+  "date": "2020-06-16",
+  "title": "McDonald's Stock Rebounds From Support on Better-Than-Expected Sales",
+  "finbert": "negative",
+  "tone": -0.7785
+ },
+ {
+  "id": 13,
+  "ticker": "ULVR.L",
+  "date": "2024-12-20",
+  "title": "Unilever teams up with the Department of Education to bring Knorr nutrition education to public schools",
+  "finbert": "positive",
+  "tone": 0.7448
+ },
+ {
+  "id": 14,
+  "ticker": "GOOGL",
+  "date": "2022-04-07",
+  "title": "Google Is Radically Changing the Way It Hires, Leaked Documents Reveal",
+  "finbert": "neutral",
+  "tone": -0.405
+ },
+ {
+  "id": 15,
+  "ticker": "BA",
+  "date": "2023-04-09",
+  "title": "Oman Air Seeks Boeing 737-900ER Aircraft Retirement By 2025",
+  "finbert": "neutral",
+  "tone": 0.1481
+ },
+ {
+  "id": 16,
+  "ticker": "CA.PA",
+  "date": "2019-02-25",
+  "title": "Haiti - FLASH : At Carrefour Feuilles, individuals open fire on innocent citizens",
+  "finbert": "negative",
+  "tone": -0.6583
+ },
+ {
+  "id": 17,
+  "ticker": "FDX",
+  "date": "2024-02-28",
+  "title": "FedEx drops naming rights of Commanders' stadium 2 years before contract expires",
+  "finbert": "negative",
+  "tone": -0.8009
+ },
+ {
+  "id": 18,
+  "ticker": "QCOM",
+  "date": "2022-11-16",
+  "title": "AR glasses will have a dedicated Qualcomm chip in 2023",
+  "finbert": "neutral",
+  "tone": 0.1546
+ },
+ {
+  "id": 19,
+  "ticker": "SBUX",
+  "date": "2022-08-18",
+  "title": "Starbucks Is Ordered to Reinstate Fired Activist Employees (Published 2022)",
+  "finbert": "negative",
+  "tone": -0.7679
+ },
+ {
+  "id": 20,
+  "ticker": "MSFT",
+  "date": "2015-02-11",
+  "title": "Google Threatens to Air Microsoft and Apple's Dirty Code",
+  "finbert": "negative",
+  "tone": -0.876
+ },
+ {
+  "id": 21,
+  "ticker": "VOW3.DE",
+  "date": "2020-08-12",
+  "title": "2020 Volkswagen Jetta GLI Autobahn Review: A Solid Daily Driver",
+  "finbert": "positive",
+  "tone": 0.7494
+ },
+ {
+  "id": 22,
+  "ticker": "KO",
+  "date": "2019-06-27",
+  "title": "A First for B2B Payments From Masterpass and Coca-Cola Icecek",
+  "finbert": "positive",
+  "tone": 0.8586
+ },
+ {
+  "id": 23,
+  "ticker": "UPS",
+  "date": "2023-02-07",
+  "title": "Video: UPS tractor-trailer crashes on side, blocks busy roadway in Orlando",
+  "finbert": "negative",
+  "tone": -0.613
+ },
+ {
+  "id": 24,
+  "ticker": "MCD",
+  "date": "2024-08-18",
+  "title": "Where the law stands 30 years after a woman sued McDonald's for spilling hot coffee",
+  "finbert": "negative",
+  "tone": -0.4889
+ },
+ {
+  "id": 25,
+  "ticker": "C",
+  "date": "2019-10-14",
+  "title": "Citi's head of euro swaps trading quit amidst claims of Paris move for team",
+  "finbert": "negative",
+  "tone": -0.9141
+ },
+ {
+  "id": 26,
+  "ticker": "PEP",
+  "date": "2021-04-28",
+  "title": "Unilever, PepsiCo, Shell and TUI join forces to improve black representation in UK marketing",
+  "finbert": "positive",
+  "tone": 0.8769
+ },
+ {
+  "id": 27,
+  "ticker": "VZ",
+  "date": "2016-03-09",
+  "title": "#WhyNotWednesday: Verizon and MakerBot Are Offering Free 3D Printed Smartphone Cases Today Until 4PM",
+  "finbert": "neutral",
+  "tone": 0.1026
+ },
+ {
+  "id": 28,
+  "ticker": "LLY",
+  "date": "2025-11-06",
+  "title": "Novo, Lilly cut deal with Trump to lower prices of obesity drugs",
+  "finbert": "positive",
+  "tone": 0.0771
+ },
+ {
+  "id": 29,
+  "ticker": "QCOM",
+  "date": "2019-12-04",
+  "title": "Qualcomm Bets Big on 5G With Its Newest Mobile Chips",
+  "finbert": "positive",
+  "tone": 0.918
+ },
+ {
+  "id": 30,
+  "ticker": "GOOGL",
+  "date": "2018-04-27",
+  "title": "Alphabet's Brin Stresses Humility in Midst of Big Tech Backlash",
+  "finbert": "neutral",
+  "tone": 0.2964
+ },
+ {
+  "id": 31,
+  "ticker": "PHIA.AS",
+  "date": "2020-06-23",
+  "title": "Philips receives FDA premarket approval for its HeartStart FR3 and HeartStart FRx automated external defibrillators",
+  "finbert": "positive",
+  "tone": 0.9081
+ },
+ {
+  "id": 32,
+  "ticker": "MDT",
+  "date": "2015-12-14",
+  "title": "Medtronic opens Galway plant for major new medical device market",
+  "finbert": "positive",
+  "tone": 0.5331
+ },
+ {
+  "id": 33,
+  "ticker": "PFE",
+  "date": "2023-03-10",
+  "title": "FDA approves new nasal spray to treat migraine headaches in adults, Pfizer says",
+  "finbert": "positive",
+  "tone": 0.9129
+ },
+ {
+  "id": 34,
+  "ticker": "WMT",
+  "date": "2020-02-25",
+  "title": "Walmart steps up competition with Amazon by fulfilling orders for third-party vendors",
+  "finbert": "positive",
+  "tone": 0.9317
+ },
+ {
+  "id": 35,
+  "ticker": "COF",
+  "date": "2019-07-01",
+  "title": "Capital One keeps closing branches, even as rivals open them",
+  "finbert": "negative",
+  "tone": -0.5665
+ },
+ {
+  "id": 36,
+  "ticker": "ABT",
+  "date": "2025-09-09",
+  "title": "Gov Abbott to issue Executive Order to ban THC products",
+  "finbert": "negative",
+  "tone": -0.7213
+ },
+ {
+  "id": 37,
+  "ticker": "PFE",
+  "date": "2022-11-01",
+  "title": "Amid revenue dip, Pfizer CEO Albert Bourla is focused on 'what's next'",
+  "finbert": "negative",
+  "tone": -0.7099
+ },
+ {
+  "id": 38,
+  "ticker": "ORCL",
+  "date": "2020-03-11",
+  "title": "Giants Cancel Exhibition Game Vs. A's At Oracle Park After San Francisco Order On Coronavirus",
+  "finbert": "negative",
+  "tone": -0.8414
+ },
+ {
+  "id": 39,
+  "ticker": "VOW3.DE",
+  "date": "2021-09-06",
+  "title": "VW is reviving its iconic microbus as an electric robotaxi",
+  "finbert": "neutral",
+  "tone": 0.2507
+ },
+ {
+  "id": 40,
+  "ticker": "BAYN.DE",
+  "date": "2016-02-25",
+  "title": "Bayer CropScience completes last step of $80 million investment",
+  "finbert": "neutral",
+  "tone": 0.1831
+ },
+ {
+  "id": 41,
+  "ticker": "BA",
+  "date": "2018-09-11",
+  "title": "Air Force signs $2.9 billion contract with Boeing for 18 refueling aircraft to replace aging models",
+  "finbert": "positive",
+  "tone": 0.9109
+ },
+ {
+  "id": 42,
+  "ticker": "BAC",
+  "date": "2022-10-20",
+  "title": "Bank of America beefs up its international B2B payments tech",
+  "finbert": "positive",
+  "tone": 0.8673
+ },
+ {
+  "id": 43,
+  "ticker": "KO",
+  "date": "2015-07-09",
+  "title": "Throwback Thursday: Sex on the Beach, Coca-Cola Style",
+  "finbert": "neutral",
+  "tone": 0.0022
+ },
+ {
+  "id": 44,
+  "ticker": "NOKIA.HE",
+  "date": "2022-12-21",
+  "title": "Nokia C31 To Arrive in Pakistan Soon; Expect Supreme Value at a Budget-friendly Price",
+  "finbert": "positive",
+  "tone": 0.7727
+ },
+ {
+  "id": 45,
+  "ticker": "BA",
+  "date": "2023-06-30",
+  "title": "China Southern Airlines Reaches Ten Years Of Operation Of Boeing 787 Dreamliners",
+  "finbert": "positive",
+  "tone": 0.5353
+ },
+ {
+  "id": 46,
+  "ticker": "MSFT",
+  "date": "2021-05-17",
+  "title": "Bill Gates 'left Microsoft board amid inquiry into relationship with employee'",
+  "finbert": "negative",
+  "tone": -0.794
+ },
+ {
+  "id": 47,
+  "ticker": "CVS",
+  "date": "2022-09-14",
+  "title": "With new acquisition, CVS to get bigger and broader, raising concerns",
+  "finbert": "positive",
+  "tone": 0.9186
+ },
+ {
+  "id": 48,
+  "ticker": "AAPL",
+  "date": "2019-01-16",
+  "title": "Verizon deepens ties with Apple, offers free Apple Music to some US customers",
+  "finbert": "positive",
+  "tone": 0.8255
+ },
+ {
+  "id": 49,
+  "ticker": "SLB",
+  "date": "2018-10-24",
+  "title": "Schlumberger : Libya hopes rare Benghazi oil conference will mend rifts",
+  "finbert": "positive",
+  "tone": 0.9143
+ },
+ {
+  "id": 50,
+  "ticker": "MCD",
+  "date": "2015-04-01",
+  "title": "McDonald's to raise pay for 90,000 workers",
+  "finbert": "positive",
+  "tone": 0.8588
+ },
+ {
+  "id": 51,
+  "ticker": "PEP",
+  "date": "2023-02-20",
+  "title": "Saudi Arabia dairy company Almarai takes 100% share in PepsiCo JV",
+  "finbert": "neutral",
+  "tone": 0.0386
+ },
+ {
+  "id": 52,
+  "ticker": "TGT",
+  "date": "2023-12-07",
+  "title": "Man arrested after Target gift cards tampered with in California, shoppers warned",
+  "finbert": "negative",
+  "tone": -0.886
+ },
+ {
+  "id": 53,
+  "ticker": "ABBV",
+  "date": "2023-03-07",
+  "title": "AbbVie CEO Gonzalez scored $26M in 2022 pay as cash cow Humira neared patent cliff",
+  "finbert": "positive",
+  "tone": 0.874
+ },
+ {
+  "id": 54,
+  "ticker": "EBAY",
+  "date": "2020-03-03",
+  "title": "Lidl hand sanitiser worth 50p selling for £40 on eBay as coronavirus panic buying fears spread",
+  "finbert": "negative",
+  "tone": -0.315
+ },
+ {
+  "id": 55,
+  "ticker": "SIE.DE",
+  "date": "2025-10-22",
+  "title": "Siemens updates Designcenter Solid Edge with AI and cloud features",
+  "finbert": "neutral",
+  "tone": 0.1693
+ },
+ {
+  "id": 56,
+  "ticker": "FDX",
+  "date": "2016-12-14",
+  "title": "FedEx workers race to meet record demand",
+  "finbert": "positive",
+  "tone": 0.2732
+ },
+ {
+  "id": 57,
+  "ticker": "WMT",
+  "date": "2025-12-20",
+  "title": "Walmart and other US companies want to build a pipeline of skilled tradespeople",
+  "finbert": "positive",
+  "tone": 0.6844
+ },
+ {
+  "id": 58,
+  "ticker": "BA",
+  "date": "2016-04-21",
+  "title": "Boeing considering new 737 model to fend off competition",
+  "finbert": "positive",
+  "tone": 0.7334
+ },
+ {
+  "id": 59,
+  "ticker": "WFC",
+  "date": "2020-09-28",
+  "title": "Wells Fargo Hyderabad building conferred with LEED v4 Platinum certification",
+  "finbert": "positive",
+  "tone": 0.7434
+ },
+ {
+  "id": 60,
+  "ticker": "MRK",
+  "date": "2021-06-06",
+  "title": "Merck investigating after noose found hanging at Durham pharmaceutical plant",
+  "finbert": "negative",
+  "tone": -0.7763
+ },
+ {
+  "id": 61,
+  "ticker": "MS",
+  "date": "2022-03-18",
+  "title": "3 Top Stock Market Trades to Make Right Now: Morgan Stanley CIO",
+  "finbert": "neutral",
+  "tone": 0.0158
+ },
+ {
+  "id": 62,
+  "ticker": "BAX",
+  "date": "2023-03-19",
+  "title": "97 lbs Semifinal - Domanic Jaworsky, Toro World Club vs Michael Baxter, Punisher Wrestling Company",
+  "finbert": "neutral",
+  "tone": -0.022
+ },
+ {
+  "id": 63,
+  "ticker": "INTC",
+  "date": "2021-02-18",
+  "title": "Intel Core i3-10100 Review",
+  "finbert": "neutral",
+  "tone": 0.0219
+ },
+ {
+  "id": 64,
+  "ticker": "KO",
+  "date": "2019-05-21",
+  "title": "Coca-Cola is bringing back New Coke in honor of 'Stranger Things'",
+  "finbert": "neutral",
+  "tone": 0.1066
+ },
+ {
+  "id": 65,
+  "ticker": "ORCL",
+  "date": "2018-04-13",
+  "title": "The Foreseer's Contract - New DotA2 update brings a new hero, Oracle",
+  "finbert": "positive",
+  "tone": 0.5945
+ },
+ {
+  "id": 66,
+  "ticker": "SIE.DE",
+  "date": "2023-11-10",
+  "title": "Siemens Gamesa cancels $200M Portsmouth wind blade factory",
+  "finbert": "negative",
+  "tone": -0.9501
+ },
+ {
+  "id": 67,
+  "ticker": "KO",
+  "date": "2025-01-16",
+  "title": "Jimmie Johnson to Compete in 2025 Daytona 500, Coca-Cola 600",
+  "finbert": "neutral",
+  "tone": 0.0429
+ },
+ {
+  "id": 68,
+  "ticker": "WMT",
+  "date": "2023-04-13",
+  "title": "Community activists protest Chicago Walmart closures at Chatham Supercenter",
+  "finbert": "negative",
+  "tone": -0.9321
+ },
+ {
+  "id": 69,
+  "ticker": "EBAY",
+  "date": "2024-03-04",
+  "title": "An engineer bought a prison laptop on eBay. Then 1,200 incarcerated students lost their devices.",
+  "finbert": "negative",
+  "tone": -0.8531
+ },
+ {
+  "id": 70,
+  "ticker": "UNP",
+  "date": "2024-09-18",
+  "title": "Lacson Family Files Lawsuit Against Union Pacific, Metra, and Village of Barrington in Death of Daughter",
+  "finbert": "negative",
+  "tone": -0.8473
+ },
+ {
+  "id": 71,
+  "ticker": "SBUX",
+  "date": "2016-01-07",
+  "title": "Starbucks Appoints Mary Dillon to Board of Directors",
+  "finbert": "neutral",
+  "tone": -0.0151
+ },
+ {
+  "id": 72,
+  "ticker": "BNP.PA",
+  "date": "2024-03-14",
+  "title": "BNP Paribas Cuts Investment Banking Bonuses on Weak Trading",
+  "finbert": "negative",
+  "tone": -0.9483
+ },
+ {
+  "id": 73,
+  "ticker": "MCD",
+  "date": "2025-05-19",
+  "title": "McDonald's locations are disappearing in downtown Chicago, but new restaurants are giving it a shot",
+  "finbert": "neutral",
+  "tone": -0.21
+ },
+ {
+  "id": 74,
+  "ticker": "PEP",
+  "date": "2025-04-24",
+  "title": "At P&G and PepsiCo, tariff fallout is showing up in fewer laundry loads, heightened consumer anxiety",
+  "finbert": "negative",
+  "tone": -0.6688
+ },
+ {
+  "id": 75,
+  "ticker": "SIE.DE",
+  "date": "2023-06-28",
+  "title": "Siemens extends support for Samsung Foundry's process tech",
+  "finbert": "positive",
+  "tone": 0.7305
+ },
+ {
+  "id": 76,
+  "ticker": "BAYN.DE",
+  "date": "2024-11-12",
+  "title": "Bayer Earnings 'Not Pretty,' CEO Bill Anderson Admits As He Urges Calm",
+  "finbert": "negative",
+  "tone": -0.4052
+ },
+ {
+  "id": 77,
+  "ticker": "SBUX",
+  "date": "2018-02-05",
+  "title": "Starbucks at APU: Location, Hours & Payment Options",
+  "finbert": "neutral",
+  "tone": -0.0143
+ },
+ {
+  "id": 78,
+  "ticker": "T",
+  "date": "2018-03-13",
+  "title": "AT&T announces 10,000 square foot flagship store on Chicago's Magnificent Mile",
+  "finbert": "neutral",
+  "tone": 0.1509
+ },
+ {
+  "id": 79,
+  "ticker": "MCD",
+  "date": "2022-12-30",
+  "title": "Goodbye Big Macs: All McDonald's restaurants on NY Thruway to close soon",
+  "finbert": "negative",
+  "tone": -0.7408
+ },
+ {
+  "id": 80,
+  "ticker": "MSFT",
+  "date": "2015-05-22",
+  "title": "Microsoft, Salesforce talks fizzled over price: Sources",
+  "finbert": "neutral",
+  "tone": -0.3347
+ },
+ {
+  "id": 81,
+  "ticker": "PEP",
+  "date": "2018-04-26",
+  "title": "Pepsi CEO: The investment bankers have been knocking on our door forever",
+  "finbert": "negative",
+  "tone": -0.8044
+ },
+ {
+  "id": 82,
+  "ticker": "WMT",
+  "date": "2016-05-19",
+  "title": "Midlands Walmart stores offer new curbside pickup",
+  "finbert": "positive",
+  "tone": 0.7249
+ },
+ {
+  "id": 83,
+  "ticker": "SAN.PA",
+  "date": "2025-03-03",
+  "title": "Sanofi partners with Kuehne+Nagel for fulfilment services in Türkiye",
+  "finbert": "positive",
+  "tone": 0.6156
+ },
+ {
+  "id": 84,
+  "ticker": "GILD",
+  "date": "2024-10-02",
+  "title": "Gilead signs deals with 6 generic drugmakers to sell HIV drug in low-income countries",
+  "finbert": "positive",
+  "tone": 0.9224
+ },
+ {
+  "id": 85,
+  "ticker": "GE",
+  "date": "2025-03-01",
+  "title": "GE Aerospace's 3D printed Catalyst Turboprop engine achieves FAA Certification",
+  "finbert": "positive",
+  "tone": 0.9067
+ },
+ {
+  "id": 86,
+  "ticker": "F",
+  "date": "2024-01-23",
+  "title": "Patricia J. Ford Obituary (2024) - Manchester Township, NJ - Carmona-Bolen Home for Funerals, LLC - Whiting",
+  "finbert": "neutral",
+  "tone": 0.0174
+ },
+ {
+  "id": 87,
+  "ticker": "AMZN",
+  "date": "2019-04-11",
+  "title": "Jeff Bezos says Amazon 'remains a small player' in retail after the company posted revenues of $233 billion last year",
+  "finbert": "positive",
+  "tone": 0.5126
+ },
+ {
+  "id": 88,
+  "ticker": "ACN",
+  "date": "2020-01-22",
+  "title": "Bulgarian Blockchain Developer Limechain Joins IBM and Accenture In An Exclusive Hyperledger Club",
+  "finbert": "neutral",
+  "tone": 0.1359
+ },
+ {
+  "id": 89,
+  "ticker": "META",
+  "date": "2023-01-04",
+  "title": "European Union fines Facebook parent Meta 390M euros for privacy violations",
+  "finbert": "negative",
+  "tone": -0.9267
+ },
+ {
+  "id": 90,
+  "ticker": "MBG.DE",
+  "date": "2015-02-25",
+  "title": "Daimler boss backs Maybach SUV",
+  "finbert": "neutral",
+  "tone": -0.0415
+ },
+ {
+  "id": 91,
+  "ticker": "MRK",
+  "date": "2023-04-21",
+  "title": "Merck Ordered To Release Gardasil Adverse Events Database",
+  "finbert": "negative",
+  "tone": -0.5912
+ },
+ {
+  "id": 92,
+  "ticker": "ORCL",
+  "date": "2019-10-18",
+  "title": "Oracle Co-CEO Mark Hurd dies",
+  "finbert": "neutral",
+  "tone": -0.0355
+ },
+ {
+  "id": 93,
+  "ticker": "AMZN",
+  "date": "2015-08-26",
+  "title": "Amazon cutting jobs in hardware division after Fire Phone disaster, says report",
+  "finbert": "negative",
+  "tone": -0.952
+ },
+ {
+  "id": 94,
+  "ticker": "LOW",
+  "date": "2025-06-20",
+  "title": "Lowe's CEO Warns Young Workers. Stay Near The Cash Register, Not The Corporate Office",
+  "finbert": "negative",
+  "tone": -0.5961
+ },
+ {
+  "id": 95,
+  "ticker": "JPM",
+  "date": "2019-09-19",
+  "title": "JPMorgan Says 'Next Stop $1 Trillion' for Hedge Fund Balances",
+  "finbert": "neutral",
+  "tone": 0.0928
+ },
+ {
+  "id": 96,
+  "ticker": "WFC",
+  "date": "2024-03-13",
+  "title": "Ohio RIA and Its Founders Ordered to Pay Wells Fargo Over $3 Million",
+  "finbert": "negative",
+  "tone": -0.8957
+ },
+ {
+  "id": 97,
+  "ticker": "CL",
+  "date": "2020-01-29",
+  "title": "Colgate-Palmolive to Acquire Hello Products",
+  "finbert": "neutral",
+  "tone": 0.0242
+ },
+ {
+  "id": 98,
+  "ticker": "PFE",
+  "date": "2023-10-16",
+  "title": "With COVID sales in free-fall, Pfizer slashes revenue forecast by $9B and preps for major cost cuts",
+  "finbert": "negative",
+  "tone": -0.9643
+ },
+ {
+  "id": 99,
+  "ticker": "MC.PA",
+  "date": "2025-09-12",
+  "title": "Breakingviews - COMMENTARY: LVMH is well-placed for Armani's bespoke auction",
+  "finbert": "positive",
+  "tone": 0.8845
+ },
+ {
+  "id": 100,
+  "ticker": "NKE",
+  "date": "2022-11-29",
+  "title": "Nike, Adidas Could Reduce Order Volumes By 40%",
+  "finbert": "negative",
+  "tone": -0.9382
+ }
+]

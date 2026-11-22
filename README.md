@@ -12,7 +12,9 @@ python project.py
 ```
 Reproduces the test, tables, figures and report from the stored data (about an hour on a laptop). The test
 refuses to run if the code or choices changed after the validation freeze. The checks added after the first
-draft run separately: `diagnostics/coverage.py`, `diagnostics/fnspid_check.py` and `diagnostics/news_quality.py`.
+draft run separately: `diagnostics/coverage.py`, `diagnostics/fnspid_check.py`, `diagnostics/news_quality.py`,
+`diagnostics/events.py` and `diagnostics/manual_check.py score` (FinBERT against the author's labels in
+`data/manual_check/`).
 
 ## Structure
 ```
