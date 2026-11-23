@@ -61,10 +61,18 @@
 %% ---- references: numbered [1], 8 pt
 \renewcommand\bibfont{\footnotesize\raggedright}
 \setlength\bibsep{1pt plus 0.5pt}
-\renewcommand\bibsection{\section*{References}}
+\renewcommand\bibsection{\section*{References}\addcontentsline{toc}{section}{References}}
+
+%% ---- contents list (two columns, 8 pt, below the keywords)
+\setcounter{tocdepth}{2}
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0em}{1.5em}{\bfseries #1}{#2}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{2.1em}}
+\renewcommand\@pnumwidth{1.4em}
+\renewcommand\@tocrmarg{2em}
 
 %% ---- front matter
 \newcommand\@affiliation{}\newcommand\affiliation[1]{\renewcommand\@affiliation{#1}}
+\newcommand\@course{}\newcommand\course[1]{\renewcommand\@course{#1}}
 \newcommand\@email{}\newcommand\email[1]{\renewcommand\@email{#1}}
 \newcommand\@abstracttext{}\renewenvironment{abstract}{\global\setbox\@ewordabs\vbox\bgroup\hsize\textwidth
   \fontsize{9}{10.5}\selectfont\noindent\ignorespaces}{\egroup}
@@ -78,12 +86,16 @@
     {\fontsize{13}{15}\selectfont\@author\textsuperscript{a,*}\par}
     \vspace{8pt}
     {\fontsize{8}{10}\selectfont\textsuperscript{a}\itshape\@affiliation\par}
+    \ifx\@course\@empty\else\vspace{2pt}{\fontsize{8}{10}\selectfont\@course\par}\fi
     \vspace{6pt}\noindent\rule{\textwidth}{0.4pt}\par\vspace{6pt}
     {\fontsize{9}{10.5}\selectfont\bfseries Abstract\par}\vspace{4pt}
     \noindent\usebox\@ewordabs\par
     \vspace{8pt}
     {\fontsize{8}{10}\selectfont\noindent\textit{Keywords:} \@keywords\par}
     \vspace{6pt}\noindent\rule{\textwidth}{0.4pt}\par
+    \vspace{6pt}{\fontsize{9}{10.5}\selectfont\noindent\bfseries Contents\par}\vspace{2pt}
+    \begin{multicols}{2}\footnotesize\@starttoc{toc}\end{multicols}
+    \vspace{2pt}\noindent\rule{\textwidth}{0.4pt}\par
     \vspace{10pt}}%
   \begingroup\renewcommand\thefootnote{*}%
   \footnotetext{\raggedright Corresponding author. \textit{E-mail address:} \@email}\endgroup
